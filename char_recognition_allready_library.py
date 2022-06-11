@@ -2,7 +2,7 @@
 import easyocr
 
 
-# декоратор записывает распознанный текств файл txt
+# декоратор записывает распознанный текст в файл txt
 def file_write_dec(fn):
     def wrapped(file_name="result.txt", *args, **kwargs):
         result = fn(*args, **kwargs)
@@ -17,7 +17,7 @@ def file_write_dec(fn):
 def text_recognition(file_path=''):
     reader = easyocr.Reader(['ru', 'en'])
     result = reader.readtext(file_path, detail=0, paragraph=True)
-    result = [i for i in result[0] if i != ' ']
+    result = [i for i in result[0] if i != ' '] #при необходимости почистить на пробелы
     print(*result)
     return result
 
