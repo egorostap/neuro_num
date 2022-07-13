@@ -23,4 +23,4 @@ def text_recognition(file_path=''):
 
 
 if __name__ == '__main__':
-    text_recognition(file_path='test_nums/0-9.jpg')
+    text_recognition(file_path='../test_nums/0-9.jpg')
